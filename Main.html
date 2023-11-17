@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frases Motivacionais</title>
+  <style>
+    body {
+      background-color: #8B4513; /* Marrom */
+      color: #fff; /* Texto branco para melhor legibilidade */
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #motivationalText {
+      font-size: 18px;
+      margin: 20px 0;
+    }
+
+    #motivationalImage {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Frases Motivacionais</h1>
+
+  <button onclick="mostrarFrase()">Mostrar Frase</button>
+
+  <p id="motivationalText"></p>
+
+  <img id="motivationalImage" src="" alt="Imagem Motivacional">
+
+  <script>
+    const frasesMotivacionais = [
+      "Acredite em você mesmo e tudo será possível.",
+      "O sucesso nasce do querer, da determinação e persistência.",
+      "Você é capaz de mais do que imagina."
+      // Adicione mais frases motivacionais conforme necessário
+    ];
+
+    const imagensMotivacionais = [
+      "imagem1.jpg",
+      "imagem2.jpg",
+      "imagem3.jpg"
+      // Adicione mais nomes de imagens conforme necessário
+    ];
+
+    function mostrarFrase() {
+      const index = Math.floor(Math.random() * frasesMotivacionais.length);
+      const frase = frasesMotivacionais[index];
+      const imagem = imagensMotivacionais[index];
+
+      document.getElementById("motivationalText").textContent = frase;
+      document.getElementById("motivationalImage").src = imagem;
+    }
+  </script>
+
+</body>
+</html>
